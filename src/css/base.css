@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap');
+
+/* Light Theme (Default) */
+:root {
+  /* Light Theme Colors */
+  --color-bg-main: #F8FAFF;
+  --color-bg-card: #FFFFFF;
+  --color-bg-sidebar: #FFFFFF;
+  --color-text: #2D3748;
+  --color-text-secondary: #4A5568;
+  --color-border: #E2E8F0;
+  --color-primary: #4299E1;
+  --color-primary-hover: #3182CE;
+  --color-completed: #A0AEC0;
+  
+  /* Blue accent variations for light theme */
+  --color-accent-light: #EBF8FF;
+  --color-accent-medium: #BEE3F8;
+  --color-accent-border: #90CDF4;
+  
+  /* Priority colors (same for both themes) */
+  --color-low: #68D391;
+  --color-medium: #F6AD55;
+  --color-high: #FC8181;
+
+  /* Font variables */
+  --font-main: 'Recursive', sans-serif;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --color-bg-main: #1A202C;
+  --color-bg-card: #2D3748;
+  --color-bg-sidebar: #2D3748;
+  --color-text: #F7FAFC;
+  --color-text-secondary: #CBD5E0;
+  --color-border: #4A5568;
+  --color-primary: #63B3ED;
+  --color-primary-hover: #4299E1;
+  --color-completed: #718096;
+  
+  /* Blue accent variations for dark theme */
+  --color-accent-light: #2A4A6B;
+  --color-accent-medium: #3182CE;
+  --color-accent-border: #4299E1;
+}
+
+/* Rest of the base.css remains the same */
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-main);
+  color: var(--color-text);
+  line-height: 1.5;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* General Button Styles */
+button {
+    background-color: var(--color-primary);
+    font-family: var(--font-main);
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Common form styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--color-bg-card);
+    color: var(--color-text);
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent-light);
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: var(--color-accent-border);
+}

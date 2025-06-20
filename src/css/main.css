@@ -1,0 +1,8 @@
+/* Import all CSS files */
+@import 'base.css';
+@import 'components/auth.css';
+@import 'components/sidebar.css';
+@import 'components/todo-list.css';
+@import 'components/task.css';
+@import 'components/modal.css';
+@import 'components/filter.css';

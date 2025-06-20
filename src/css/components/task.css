@@ -1,0 +1,282 @@
+/* Todo Item Styles */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin: 10px 0;
+    background-color: var(--color-bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    transform-origin: center;
+    transition: all 0.3s ease;
+    animation: taskAppear 0.3s ease-out;
+}
+
+/* Add an appear animation for new tasks */
+@keyframes taskAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-accent-border);
+}
+
+.todo-item.completed {
+    background-color: var(--color-accent-light);
+    opacity: 0.85;
+    order: 999;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: var(--color-completed);
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.todo-text {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.todo-details {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: color 0.3s ease;
+}
+
+/* Todo Actions */
+.todo-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn,
+.complete-btn,
+.delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    background-color: var(--color-medium);
+}
+
+.edit-btn:hover {
+    background-color: #ED8936;
+}
+
+.complete-btn {
+    background-color: var(--color-low);
+}
+
+.complete-btn:hover {
+    background-color: #48BB78;
+}
+
+.delete-btn {
+    background-color: var(--color-high);
+}
+
+.delete-btn:hover {
+    background-color: #E53E3E;
+}
+
+/* Empty state */
+.empty-list-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    background-color: var(--color-bg-card);
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    background-color: var(--color-bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.edit-input {
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: var(--font-main);
+    background-color: var(--color-bg-main);
+    color: var(--color-text);
+    transition: all 0.3s ease;
+    min-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent-light);
+}
+
+.edit-form input[type="date"] {
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: var(--font-main);
+    background-color: var(--color-bg-main);
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.edit-form input[type="date"]:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent-light);
+}
+
+.edit-form select {
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: var(--font-main);
+    background-color: var(--color-bg-main);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-form select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent-light);
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.save-btn {
+    flex: 1;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: var(--font-main);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.cancel-btn {
+    flex: 1;
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: var(--font-main);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: var(--color-accent-light);
+    border-color: var(--color-accent-border);
+}
+
+/* Delete task animation */
+@keyframes taskFadeSlide {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        max-height: 100px;
+        margin: 10px 0;
+        padding: 16px;
+    }
+    60% {
+        opacity: 0.3;
+        transform: translateY(-10px) scale(0.98);
+        max-height: 80px;
+        margin: 8px 0;
+        padding: 12px 16px;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+        max-height: 0;
+        margin: 0;
+        padding: 0 16px;
+        border-width: 0;
+    }
+}
+
+.todo-item.deleting {
+    animation: taskFadeSlide 0.4s ease-in-out forwards;
+    pointer-events: none;
+}
+
+/* Priority Badge Styles */
+.priority-badge {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+.priority-high {
+    background-color: var(--color-high);
+}
+
+.priority-medium {
+    background-color: var(--color-medium);
+}
+
+.priority-low {
+    background-color: var(--color-low);
+}

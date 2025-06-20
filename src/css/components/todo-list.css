@@ -1,0 +1,99 @@
+/* Main Content Layout */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--color-bg-main);
+    transition: background-color 0.3s ease;
+}
+
+#listHeader {
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+    transition: border-color 0.3s ease;
+}
+
+#listHeader h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+/* Task Input Section */
+.task-input-section {
+    background-color: var(--color-bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.input-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 0;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 12px 16px;
+    font-family: var(--font-main);
+    font-size: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: var(--color-bg-main);
+    color: var(--color-text);
+}
+
+.todo-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent-light);
+}
+
+.todo-input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+.priority-input,
+.date-input {
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-family: var(--font-main);
+    font-size: 14px;
+    background-color: var(--color-bg-main);
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.priority-input:focus,
+.date-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent-light);
+}
+
+#addTaskButton {
+    padding: 12px 16px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+#addTaskButton:hover {
+    background-color: var(--color-primary-hover);
+}
