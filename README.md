@@ -32,8 +32,21 @@ cd todo-list-application
 
 ## Preview
 
-* TODO
+**Demo:** [https://todo-list-application-lg.netlify.app/](https://todo-list-application-lg.netlify.app/)
 
+**Screenshots:**
+
+##### Login Page
+<img src="src/assets/login-page.png" alt="login-page" width="250"/>
+
+##### Registration Page
+<img src="src/assets/Registration-page.png" alt="registration-page" width="250"/>
+
+##### Main Todo List Page
+<img src="src/assets/todo-list.png" alt="todo-list" width="450"/>
+
+##### Dark Mode
+<img src="src/assets/dark-theme.png" alt="dark-theme" width="450"/>
 
 ## Help
 
