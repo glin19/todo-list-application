@@ -40,7 +40,7 @@ cd todo-list-application
 <img src="src/assets/login-page.png" alt="login-page" width="250"/>
 
 ##### Registration Page
-<img src="src/assets/Registration-page.png" alt="registration-page" width="250"/>
+<img src="src/assets/registration-page.png" alt="registration-page" width="250"/>
 
 ##### Main Todo List Page
 <img src="src/assets/todo-list.png" alt="todo-list" width="450"/>
